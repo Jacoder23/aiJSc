@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0061)https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst -->
 <html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Strings, Alerts, and What Not</title>
+<title>Prompt Me Would You?</title>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo.png">
@@ -330,7 +330,7 @@ font-style:normal;
 </head>
 <body>
 
-<a href="index.html"><h1 style="text-align: center;">1A. Strings, Alerts, and What Not</h1></a>
+<a href="index.html"><h1 style="text-align: center;">1B. Prompt Me Would You?</h1></a>
 <div id="tryitLeaderboard" style="background-color:#ffffff">
 <!-- TryitLeaderboard -->
   <div id="div-gpt-ad-1428407818244-0">
@@ -443,58 +443,37 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0');
 &lt;html&gt;
 &lt;body&gt;
 
-&lt;h2&gt;My First JavaScript Program&lt;/h2&gt;
+&lt;h2&gt;Prompt Me Would You?&lt;/h2&gt;
 
 &lt;script&gt;
 	// Click RUN to run this program!
-	alert("This is an alert box, and it's what you'll be using to output text and data in JavaScript!");
-	// For this exercise you'll be learning about alert boxes, like the one you saw earlier, and variables.
-	// These parts of the code here that have double slashes at the start are comments and can be used to leave messages in your code.
-	// Also notice how every line of code ends in ;
-	// Remember that not leaving a semicolon at the end can create problems with your code.
+	prompt("This is an prompt box, like an alert box you can use it to display data but also take data from the input box below.");
+	// For this exercise you'll be learning about prompts boxes, which like alerts, can display data and also take input from the user and changing strings to numbers and vice versa.	
+	var name = prompt("What is your name?");
+	// The prompt by itself does not save the data entered by the user(which is always saved as a string) so you need to declare a variable to that prompt.
+	alert("Hello, " + name + "!");
+	// Again you can use these variables like before.
 	
-	var money = 0;
-	// The line above is what you'd call a variable, to be specific, this piece of code is declaring a variable.
-	// Declaring a variable is denoted by writing "var" which tells the computer that we're ddeclaring a variable and then the name of the variable which in this case is "money".
+	var number = prompt("Enter a number.");
+	// There are some limitations though.
 	
-	money = 5;
-	// After the variable has been declared it's fine to use it without the var.
+	alert(number + 5);
+	// According to the code above you should get the number you inputted increased by 5.
+	// But as you can see the number you entered is treated as a string and goes through concatenation instead of addition.
 	
-	money = money + 2;
-	money = money - 2;
-	money = money * 2;
-	money = money / 2;
-	money = money % 2;
-	// Basic arithmetic is also possible in JavaScript
+	number = Number(number);
+	// The code above is using the Number command (the N has to be capitalized) to convert the string to a number.
+	alert(number + 5);
+	// So now it's treated as a number.
 	
-	money = "Three Fifty";
-	// You can also use text (otherwise known as strings) in JavaScript.
-	// Just remember to put quotation marks around the text.
+	// The reverse is String();
 	
-	alert("Good luck!");
-	// The alert command above can display any data you put between it's brackets, in this case it's displaying a string.
+	// Alright to end this lesson how about you make a simple tax calculator(boring I know).
 	
-	alert(money);
-	alert(24 + 36);
-	// The alert command can also be used with both variables and numbers.
+	// All you'll  need to do is take the amount of money from the user, save that into a variable, convert that string into a number then display 80% of that number (assumming a 20% tax rate of course)
+	// If you're done why not also try to add another prompt to get the actual tax rate from the user then apply it?
+	// I won't be giving you any tips for this one, as we're still in the relatively easy stuff.
 	
-	alert("Hello, " + "World!");
-	
-	// In JavaScript there is something called concatenation which allows two or more string to be joined together and used as one string.
-	// If you try to put two strings together without the plus sign, it won't work though.
-	
-	var firstWord = "Hello, ";
-	var secondWord = "World!";
-	alert(firstWord + secondWord);
-	
-	// Since variables can act as either numbers or string you can also use concatenation with them.
-	
-	// Alright, to finish this lesson off how about you try and make a new variable called sentence and then make it have the contents: "Hello, World!"
-	// The trick? You can't actually type out "Hello, World!", you're going to need to make use of a certain technique you learned and apply it to variable declaration.
-	// At the end make sure to put the sentence variable into an alert command to make it display itself so you can see if it worked.
-	
-	// Don't forget not to leave this page until you're done since there's no save button!
-	// If you want you can save this into an .html file as that will work just as well.
 &lt;/script&gt;
 
 &lt;/body&gt;
